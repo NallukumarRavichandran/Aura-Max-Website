@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Barlow+Condensed:wght@500;600;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "@tailwindcss/typography";
@@ -67,12 +67,6 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* ── LIGHT MODE (default) ─────────────────────────────────────
-   Clean white construction theme: white canvas, near-black type,
-   construction orange (#f97316) as the bold accent.
-   Dark alternating sections (Services, Contact, Footer, Hero)
-   stay charcoal in both modes — intentional design rhythm.
-─────────────────────────────────────────────────────────────── */
 :root {
   --button-outline: rgba(0,0,0, .12);
   --badge-outline: rgba(0,0,0, .06);
@@ -80,13 +74,12 @@
   --elevate-1: rgba(0,0,0, .02);
   --elevate-2: rgba(0,0,0, .06);
 
-  /* Canvas — pure white */
   --background: 0 0% 100%;
-  --foreground: 220 13% 9%;          /* #141518 near-black */
+  --foreground: 220 13% 9%;
 
   --border: 220 13% 88%;
   --input: 220 13% 88%;
-  --ring: 24 95% 53%;                /* orange focus ring */
+  --ring: 24 95% 53%;
 
   --card: 0 0% 100%;
   --card-foreground: 220 13% 9%;
@@ -96,18 +89,16 @@
   --popover-foreground: 220 13% 9%;
   --popover-border: 220 13% 90%;
 
-  /* Construction orange */
-  --primary: 24 95% 53%;             /* #f97316 */
+  --primary: 24 95% 53%;
   --primary-foreground: 0 0% 100%;
 
-  /* Charcoal — used for dark alternating sections */
-  --secondary: 220 13% 12%;          /* #1a1c20 */
+  --secondary: 220 13% 12%;
   --secondary-foreground: 0 0% 97%;
 
   --muted: 220 13% 95%;
   --muted-foreground: 220 9% 46%;
 
-  --accent: 24 100% 96%;             /* very pale orange tint */
+  --accent: 24 100% 96%;
   --accent-foreground: 24 95% 38%;
 
   --destructive: 0 84% 60%;
@@ -128,22 +119,18 @@
   --chart-4: 32 70% 45%;
   --chart-5: 220 9% 60%;
 
-  --app-font-sans: 'Inter', sans-serif;
-  --app-font-serif: 'Playfair Display', serif;
+  --app-font-sans: 'Barlow', sans-serif;
+  --app-font-serif: 'Oswald', sans-serif;
   --app-font-mono: Menlo, monospace;
 
   --radius: 0rem;
 }
 
-/* ── DARK MODE ────────────────────────────────────────────────
-   Deep black canvas; same orange accent; secondary shifts
-   slightly lighter so those sections still contrast with bg.
-─────────────────────────────────────────────────────────────── */
 .dark {
   --button-outline: rgba(255,255,255, .10);
   --badge-outline: rgba(255,255,255, .06);
 
-  --background: 220 13% 6%;          /* #0c0d10 near-black */
+  --background: 220 13% 6%;
   --foreground: 0 0% 95%;
 
   --border: 220 13% 18%;
@@ -189,9 +176,18 @@
   }
   body {
     @apply font-sans antialiased bg-background text-foreground selection:bg-primary/20 selection:text-primary;
+    font-weight: 500;
+    letter-spacing: 0.01em;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif tracking-tight text-foreground;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    @apply text-foreground;
+  }
+  p, span, label, li {
+    font-family: 'Barlow', sans-serif;
   }
 }
 

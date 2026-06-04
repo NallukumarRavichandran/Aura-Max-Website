@@ -102,10 +102,10 @@ export default function Navbar() {
 
           <Button
             onClick={() => scrollTo("contact")}
-            className="hidden md:inline-flex rounded-none px-6 uppercase tracking-widest text-xs h-10"
+            className="hidden md:inline-flex rounded-none px-6 uppercase tracking-widest text-xs h-10 font-bold"
             data-testid="nav-cta"
           >
-            Get in Touch
+            Talk to Expert
           </Button>
         </div>
       </div>
