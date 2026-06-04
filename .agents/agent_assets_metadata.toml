@@ -1,0 +1,20 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "GpheX0tOGSGjqaFnVSPs8"
+uri = "file://artifacts/auramax-architects/public/images/portfolio-1.png"
+type = "image"
+title = "Modern Twin Residence"
+
+[[generated]]
+id = "rA0FklMl4r5SbjwtoU-6S"
+uri = "file://artifacts/auramax-architects/public/images/portfolio-2.png"
+type = "image"
+title = "Sunset Pool Villa"
+
+[[generated]]
+id = "SItFxLmXbrtJ605IyHE00"
+uri = "file://artifacts/auramax-architects/public/images/portfolio-3.png"
+type = "image"
+title = "Horizon Office Complex"
