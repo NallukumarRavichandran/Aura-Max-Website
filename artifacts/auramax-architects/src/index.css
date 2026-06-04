@@ -67,105 +67,120 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+/* ── LIGHT MODE (default) ─────────────────────────────────────
+   Clean white construction theme: white canvas, near-black type,
+   construction orange (#f97316) as the bold accent.
+   Dark alternating sections (Services, Contact, Footer, Hero)
+   stay charcoal in both modes — intentional design rhythm.
+─────────────────────────────────────────────────────────────── */
 :root {
-  --button-outline: rgba(0,0,0, .10);
-  --badge-outline: rgba(0,0,0, .05);
+  --button-outline: rgba(0,0,0, .12);
+  --badge-outline: rgba(0,0,0, .06);
   --opaque-button-border-intensity: -8;
-  --elevate-1: rgba(0,0,0, .03);
-  --elevate-2: rgba(0,0,0, .08);
+  --elevate-1: rgba(0,0,0, .02);
+  --elevate-2: rgba(0,0,0, .06);
 
-  /* Stone, concrete, warm wood palette */
-  --background: 40 20% 96%; /* #f6f5f3 */
-  --foreground: 20 6% 15%; /* #282725 */
-  
-  --border: 30 10% 85%;
-  --input: 30 10% 85%;
-  --ring: 32 35% 55%;
+  /* Canvas — pure white */
+  --background: 0 0% 100%;
+  --foreground: 220 13% 9%;          /* #141518 near-black */
+
+  --border: 220 13% 88%;
+  --input: 220 13% 88%;
+  --ring: 24 95% 53%;                /* orange focus ring */
 
   --card: 0 0% 100%;
-  --card-foreground: 20 6% 15%;
-  --card-border: 30 10% 90%;
+  --card-foreground: 220 13% 9%;
+  --card-border: 220 13% 90%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 20 6% 15%;
-  --popover-border: 30 10% 90%;
+  --popover-foreground: 220 13% 9%;
+  --popover-border: 220 13% 90%;
 
-  --primary: 32 35% 45%; /* warm wood/bronze */
+  /* Construction orange */
+  --primary: 24 95% 53%;             /* #f97316 */
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 20 6% 25%; /* charcoal concrete */
-  --secondary-foreground: 40 20% 96%;
+  /* Charcoal — used for dark alternating sections */
+  --secondary: 220 13% 12%;          /* #1a1c20 */
+  --secondary-foreground: 0 0% 97%;
 
-  --muted: 30 10% 90%;
-  --muted-foreground: 20 6% 40%;
+  --muted: 220 13% 95%;
+  --muted-foreground: 220 9% 46%;
 
-  --accent: 32 35% 92%;
-  --accent-foreground: 32 35% 30%;
+  --accent: 24 100% 96%;             /* very pale orange tint */
+  --accent-foreground: 24 95% 38%;
 
-  --destructive: 0 84.2% 60.2%;
+  --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
 
-  --sidebar: 40 20% 96%;
-  --sidebar-foreground: 20 6% 15%;
-  --sidebar-border: 30 10% 85%;
-  --sidebar-primary: 32 35% 45%;
+  --sidebar: 0 0% 100%;
+  --sidebar-foreground: 220 13% 9%;
+  --sidebar-border: 220 13% 88%;
+  --sidebar-primary: 24 95% 53%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 32 35% 92%;
-  --sidebar-accent-foreground: 32 35% 30%;
-  --sidebar-ring: 32 35% 55%;
+  --sidebar-accent: 24 100% 96%;
+  --sidebar-accent-foreground: 24 95% 38%;
+  --sidebar-ring: 24 95% 53%;
 
-  --chart-1: 32 35% 45%;
-  --chart-2: 20 6% 25%;
-  --chart-3: 40 20% 60%;
-  --chart-4: 25 15% 40%;
-  --chart-5: 35 25% 70%;
+  --chart-1: 24 95% 53%;
+  --chart-2: 220 13% 12%;
+  --chart-3: 24 80% 68%;
+  --chart-4: 32 70% 45%;
+  --chart-5: 220 9% 60%;
 
   --app-font-sans: 'Inter', sans-serif;
   --app-font-serif: 'Playfair Display', serif;
   --app-font-mono: Menlo, monospace;
-  
-  --radius: 0rem; /* architecture firms often look better with sharp corners */
+
+  --radius: 0rem;
 }
 
+/* ── DARK MODE ────────────────────────────────────────────────
+   Deep black canvas; same orange accent; secondary shifts
+   slightly lighter so those sections still contrast with bg.
+─────────────────────────────────────────────────────────────── */
 .dark {
-  --background: 20 6% 10%;
-  --foreground: 40 20% 96%;
-  
-  --border: 20 6% 20%;
-  --input: 20 6% 20%;
-  --ring: 32 35% 45%;
+  --button-outline: rgba(255,255,255, .10);
+  --badge-outline: rgba(255,255,255, .06);
 
-  --card: 20 6% 12%;
-  --card-foreground: 40 20% 96%;
-  --card-border: 20 6% 18%;
+  --background: 220 13% 6%;          /* #0c0d10 near-black */
+  --foreground: 0 0% 95%;
 
-  --popover: 20 6% 12%;
-  --popover-foreground: 40 20% 96%;
-  --popover-border: 20 6% 18%;
+  --border: 220 13% 18%;
+  --input: 220 13% 18%;
+  --ring: 24 95% 53%;
 
-  --primary: 32 35% 55%;
+  --card: 220 13% 9%;
+  --card-foreground: 0 0% 95%;
+  --card-border: 220 13% 16%;
+
+  --popover: 220 13% 9%;
+  --popover-foreground: 0 0% 95%;
+  --popover-border: 220 13% 16%;
+
+  --primary: 24 95% 53%;
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 20 6% 25%;
-  --secondary-foreground: 40 20% 96%;
+  --secondary: 220 13% 14%;
+  --secondary-foreground: 0 0% 95%;
 
-  --muted: 20 6% 18%;
-  --muted-foreground: 40 10% 60%;
+  --muted: 220 13% 14%;
+  --muted-foreground: 220 9% 58%;
 
-  --accent: 32 35% 20%;
-  --accent-foreground: 32 35% 80%;
+  --accent: 24 80% 16%;
+  --accent-foreground: 24 95% 70%;
 
-  --destructive: 0 62.8% 30.6%;
+  --destructive: 0 63% 31%;
   --destructive-foreground: 0 0% 98%;
 
-  --sidebar: 20 6% 12%;
-  --sidebar-foreground: 40 20% 96%;
-  --sidebar-border: 20 6% 20%;
-  --sidebar-primary: 32 35% 55%;
+  --sidebar: 220 13% 9%;
+  --sidebar-foreground: 0 0% 95%;
+  --sidebar-border: 220 13% 18%;
+  --sidebar-primary: 24 95% 53%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 32 35% 20%;
-  --sidebar-accent-foreground: 32 35% 80%;
-  --sidebar-ring: 32 35% 45%;
+  --sidebar-accent: 24 80% 16%;
+  --sidebar-accent-foreground: 24 95% 70%;
+  --sidebar-ring: 24 95% 53%;
 }
 
 @layer base {
